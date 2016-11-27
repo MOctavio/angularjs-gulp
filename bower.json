@@ -1,0 +1,26 @@
+{
+    "name": "angularjs-gulp",
+    "version": "1.0.0",
+    "description": "gulp automated environment to work with angularjs single page applications.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MOctavio/angularjs-gulp.git"
+    },
+    "keywords": [
+        "angularjs",
+        "gulp"
+    ],
+    "author": "Mario Octavio Jimenez",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/MOctavio/angularjs-gulp/issues"
+    },
+    "homepage": "https://github.com/MOctavio/angularjs-gulp#readme",
+    "dependencies": {
+        "angular": "^1.5.8",
+        "angular-ui-router": "^0.3.2"
+    },
+    "devDependencies": {
+        "angular-mocks": "^1.5.8"
+    }
+}

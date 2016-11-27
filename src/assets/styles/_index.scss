@@ -1,0 +1,23 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	@extend %font;
+	@extend %center;
+	background-color: whitesmoke;
+	color: $gray-color;
+	margin: 0 auto;
+}
+a, a:active, a:hover, a:visited {
+	text-decoration: none;
+	color: $primary-color;	
+}
+.title {
+	@extend %font;
+	color: $primary-color;
+	font-size: $font-xl;
+	margin-top: $font-xl;
+}

@@ -1,0 +1,11 @@
+node_modules
+dist
+public
+src/vendors
+.tmp
+.sass-cache
+bower_components
+test/bower_components
+.idea
+*.iml
+*.log
