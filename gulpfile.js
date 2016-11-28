@@ -78,7 +78,7 @@ pipes.buildStylesProd = function() {
     return gulp.src(PATH.styles)
         .pipe(plugins.sass())
         .pipe(cachebust.resources())
-        .pipe(plugins.minifyCss())
+        .pipe(plugins.cleanCSS())
         .pipe(gulp.dest(`${PATH.distProd}/assets`));
 };
 

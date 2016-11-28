@@ -1,58 +1,58 @@
 {
-    "name": "angularjs-gulp",
-    "version": "1.0.0",
-    "description": "gulp automated environment to work with angularjs single page applications.",
-    "scripts": {
-        "postinstall": "bower install",
-        "update-deps": "npm update",
-        "postupdate-deps": "bower update",
-        "test": "karma start karma.conf.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/MOctavio/angularjs-gulp.git"
-    },
-    "keywords": [
-        "angularjs",
-        "gulp"
-    ],
-    "author": "Mario Octavio Jimenez",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/MOctavio/angularjs-gulp/issues"
-    },
-    "homepage": "https://github.com/MOctavio/angularjs-gulp#readme",
-    "devDependencies": {
-        "babel-eslint": "^7.1.1",
-        "babel-preset-es2015": "^6.18.0",
-        "bower": "^1.8.0",
-        "del": "^2.2.2",
-        "eslint": "^3.10.2",
-        "eslint-config-angular": "^0.5.0",
-        "eslint-plugin-angular": "^1.4.1",
-        "gulp": "^3.9.1",
-        "gulp-angular-filesort": "^1.1.1",
-        "gulp-babel": "^6.1.2",
-        "gulp-cachebust": "0.0.6",
-        "gulp-concat": "^2.6.1",
-        "gulp-connect": "^5.0.0",
-        "gulp-eslint": "^3.0.1",
-        "gulp-htmlhint": "^0.3.1",
-        "gulp-htmlmin": "^3.0.0",
-        "gulp-inject": "^4.1.0",
-        "gulp-load-plugins": "^1.4.0",
-        "gulp-minify-css": "^1.2.4",
-        "gulp-plumber": "^1.1.0",
-        "gulp-sass": "^2.3.2",
-        "gulp-sourcemaps": "^1.9.1",
-        "gulp-uglify": "^2.0.0",
-        "gulp-watch": "^4.3.11",
-        "jasmine-core": "^2.5.2",
-        "karma": "^1.3.0",
-        "karma-jasmine": "^1.0.2",
-        "karma-jasmine-matchers": "^3.0.1",
-        "karma-phantomjs-launcher": "^1.0.2",
-        "main-bower-files": "^2.13.1",
-        "run-sequence": "^1.2.2"
-    }
+  "name": "angularjs-gulp",
+  "version": "1.0.0",
+  "description": "gulp automated environment to work with angularjs single page applications.",
+  "scripts": {
+    "postinstall": "bower install",
+    "update-deps": "npm update",
+    "postupdate-deps": "bower update",
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MOctavio/angularjs-gulp.git"
+  },
+  "keywords": [
+    "angularjs",
+    "gulp"
+  ],
+  "author": "Mario Octavio Jimenez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MOctavio/angularjs-gulp/issues"
+  },
+  "homepage": "https://github.com/MOctavio/angularjs-gulp#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.18.0",
+    "bower": "^1.8.0",
+    "del": "^2.2.2",
+    "eslint": "^3.10.2",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-plugin-angular": "^1.4.1",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cachebust": "0.0.6",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-matchers": "^3.0.1",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "main-bower-files": "^2.13.1",
+    "run-sequence": "^1.2.2"
+  }
 }
