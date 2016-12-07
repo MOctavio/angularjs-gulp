@@ -9,14 +9,17 @@ const CacheBuster = require('gulp-cachebust'),
 const cachebust = new CacheBuster();
 
 const PATH = {
-    assets: ['src/assets/**/*.jpg', 'src/assets/**/*.jpeg', 'src/assets/**/*.png', 'src/assets/**/*.ico', 'src/assets/**/*.gif'],
+    assets: {
+        images: ['src/assets/**/*.jpg', 'src/assets/**/*.jpeg', 'src/assets/**/*.png', 'src/assets/**/*.ico', 'src/assets/**/*.gif'],
+        styles: ['src/assets/**/*.css', 'src/assets/**/*.scss']
+    },
     distDev: 'public',
     distProd: 'dist',
     entry: 'src/js/app.js',
     index: 'src/index.html',
     partials: ['src/**/*.html', '!src/index.html'],
     scripts: ['src/**/*.js', 'src/*.js'],
-    styles: ['src/js/**/*.css', 'src/js/**/*.scss', 'src/assets/**/*.css', 'src/assets/**/*.scss'],
+    styles: ['src/js/directives/'],
     testFiles: 'test/unit/*.js'
 };
 
@@ -27,6 +30,7 @@ const pipes = {};
 pipes.eslint = function() {
     return gulp.src(PATH.scripts)
         .pipe(plugins.eslint())
+        .pipe(plugins.plumber())
         .pipe(plugins.eslint.format())
         .pipe(plugins.eslint.failAfterError());
 };
@@ -67,18 +71,22 @@ pipes.buildJsProd = function() {
 
 // Styles
 pipes.buildStylesDev = function() {
-    return gulp.src(PATH.styles)
+    return gulp.src(PATH.assets.styles))
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.plumber())
-        .pipe(plugins.sass())
+        .pipe(plugins.sass({
+            includePaths: PATH.styles
+        }))
         .pipe(plugins.sourcemaps.write())
         .pipe(gulp.dest(`${PATH.distDev}/assets`));
 };
 pipes.buildStylesProd = function() {
-    return gulp.src(PATH.styles)
-        .pipe(plugins.sass())
+    return gulp.src(PATH.assets.styles)
+        .pipe(plugins.sass({
+            includePaths: PATH.styles
+        }))
         .pipe(cachebust.resources())
-        .pipe(plugins.cleanCSS())
+        .pipe(plugins.cleanCss())
         .pipe(gulp.dest(`${PATH.distProd}/assets`));
 };
 
@@ -98,7 +106,7 @@ pipes.buildPartialsProd = function() {
 
 // Assets
 pipes.processAssets = function(_path) {
-    return gulp.src(PATH.assets)
+    return gulp.src(PATH.assets.images)
         .pipe(gulp.dest(`${_path}/assets`));
 };
 
