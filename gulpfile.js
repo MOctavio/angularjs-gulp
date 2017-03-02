@@ -19,7 +19,7 @@ const PATH = {
     index: 'src/index.html',
     partials: ['src/**/*.html', '!src/index.html'],
     scripts: ['src/**/*.js', 'src/*.js'],
-    styles: ['src/js/directives/'],
+    styles: ['src/js/directives/**/*.scss'],
     testFiles: 'test/unit/*.js'
 };
 
@@ -206,7 +206,7 @@ gulp.task('watch', function() {
         console.log(`[${event.type}] ${event.path}`);
         pipes.buildJsDev().pipe(plugins.connect.reload())
     });
-    gulp.watch([PATH.styles], function(event) {
+    gulp.watch([PATH.styles, PATH.assets.styles], function(event) {
         console.log(`[${event.type}] ${event.path}`);
         pipes.buildStylesDev().pipe(plugins.connect.reload())
     });
