@@ -71,7 +71,7 @@ pipes.buildJsProd = function() {
 
 // Styles
 pipes.buildStylesDev = function() {
-    return gulp.src(PATH.assets.styles))
+    return gulp.src(PATH.assets.styles)
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.plumber())
         .pipe(plugins.sass({
